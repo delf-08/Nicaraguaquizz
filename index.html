@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Nicaragüense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bienvenido a Cultura Nicaragüense</h1>
+        <input type="text" id="username" placeholder="¿Cuál es tu nombre?">
+        <input type="email" id="teacher-email" placeholder="¿Correo electronico del docente?"> <!-- Campo de correo -->
+        <button id="start-btn" onclick="startQuiz()">Iniciar</button>
+    </div>
+
+    <div class="progress-container" id="progress-container" style="display: none;">
+        <div class="progress-bar" id="progress-bar"></div>
+        <p id="progress-text">Pregunta 1 de 10</p>
+    </div>
+
+    <div class="question-box" id="question-box" style="display: none;"></div>
+    <div class="options-container" id="options-container" style="display: none;"></div>
+
+    <footer class="footer">
+        <p>© 2024 Raices Nica. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- SDK Actualizado de EmailJS -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "JhjT_i8DLDQvpuWBX",
+        });
+    })();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
